@@ -68,7 +68,7 @@
 
 1. 克隆仓库：
 ```bash
-git clone [repository-url]
+git clone [https://github.com/hongjiaren/agent_model_test.git]
 cd agent-model-test
 ```
 
@@ -118,9 +118,9 @@ python scripts/run_test.py --test-type [test_type] --model [model_name]
 
 ## 📞 联系方式
 
-- 项目维护者：[您的名字]
-- 邮箱：[您的邮箱]
-- 项目链接：[项目URL]
+- 项目维护者：[Hongjia Ren]
+- 邮箱：[hongjiaren.work@gmail.com]
+- 项目链接：[https://github.com/hongjiaren/agent_model_test.git]
 
 ## 🙏 致谢
 
