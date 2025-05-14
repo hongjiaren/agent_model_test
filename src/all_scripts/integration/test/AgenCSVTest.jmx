@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="chatRPA通信压测">
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>false</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">1000</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="流式压测 - qa" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="Threads initial delay">2</stringProp>
+        <stringProp name="Start users count">2</stringProp>
+        <stringProp name="Start users count burst">2</stringProp>
+        <stringProp name="Start users period">10</stringProp>
+        <stringProp name="Stop users count">5</stringProp>
+        <stringProp name="Stop users period">2</stringProp>
+        <stringProp name="flighttime">60</stringProp>
+        <stringProp name="rampUp">2</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="filename">C:/Users/70203/Desktop/tonken压测数据(1).csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">token</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Sec-WebSocket-Version</stringProp>
+              <stringProp name="Header.value">13</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="WebSocket Open Connection" enabled="true">
+          <boolProp name="TLS">false</boolProp>
+          <stringProp name="server">tars-ipa.qa.ii-ai.tech</stringProp>
+          <stringProp name="port">80</stringProp>
+          <stringProp name="path">/tars/agent/socketIO</stringProp>
+          <stringProp name="connectTimeout">20000</stringProp>
+          <stringProp name="readTimeout">6000</stringProp>
+        </eu.luminis.jmeter.wssampler.OpenWebSocketSampler>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="定义isExcute变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="isExcute" elementType="Argument">
+              <stringProp name="Argument.name">isExcute</stringProp>
+              <stringProp name="Argument.value">true</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+          <stringProp name="TestPlan.comments">该变量控制何时停止读取当前请求下的流数据</stringProp>
+        </Arguments>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <intProp name="LoopController.loops">-1</intProp>
+        </LoopController>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">import java.util.Random;
+
+// 创建 Random 对象
+Random rand = new Random();
+
+// 定义可能的字符集合
+String upperCase = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+String lowerCase = upperCase.toLowerCase();
+String numbers = &quot;0123456789&quot;;
+String allChars = upperCase + lowerCase + numbers;
+
+// 定义结果字符串
+StringBuilder stringBuilder = new StringBuilder();
+
+// 生成 10 个随机字符
+for (int i = 0; i &lt; 10; i++) {
+    // 随机选择一个字符
+    char randomChar = allChars.charAt(rand.nextInt(allChars.length()));
+    // 将字符添加到结果字符串
+    stringBuilder.append(randomChar);
+}
+
+// 将生成的随机字符串设置为 JMeter 变量，以便在测试计划的其他部分使用
+log.info(&quot;requestId的值为-----------------------------: &quot; + stringBuilder);
+vars.put(&quot;requestId&quot;, &quot;00000_&quot; + stringBuilder.toString());</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler" testname="request-response" enabled="true">
+            <boolProp name="createNewConnection">false</boolProp>
+            <boolProp name="TLS">false</boolProp>
+            <stringProp name="server"></stringProp>
+            <stringProp name="port">80</stringProp>
+            <stringProp name="path"></stringProp>
+            <stringProp name="connectTimeout">20000</stringProp>
+            <stringProp name="payloadType">Text</stringProp>
+            <stringProp name="requestData">{
+    &quot;authorization&quot;: &quot;${token}&quot;,
+    &quot;payload&quot;: {
+        &quot;isAtApplication&quot;: false,
+        &quot;packageId&quot;: &quot;&quot;,
+        &quot;action&quot;: &quot;init&quot;,
+        &quot;componentInfo&quot;: {
+
+        },
+        &quot;sessionId&quot;: &quot;&quot;,
+        &quot;autofill&quot;: true,
+        &quot;factoryVersion&quot;: &quot;7.0.2.0-feat-corp-brain-702&quot;,
+        &quot;message&quot;: &quot;杭州有什么好玩的地方&quot;,
+        &quot;type&quot;: &quot;flow&quot;,
+        &quot;userId&quot;: 14894,
+        &quot;apps&quot;: [
+
+        ]
+    },
+    &quot;requestId&quot;: &quot;${requestId}&quot;,
+    &quot;action&quot;: &quot;chat&quot;
+}</stringProp>
+            <stringProp name="readTimeout">120000</stringProp>
+            <boolProp name="loadDataFromFile">false</boolProp>
+            <stringProp name="dataFile"></stringProp>
+          </eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler>
+          <hashTree/>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script"> vars.put(&quot;isExcute&quot;, &quot;true&quot;);</stringProp>
+            <stringProp name="TestPlan.comments">每次loop时重置变量为true，模拟进行新的提问</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+            <stringProp name="WhileController.condition">${__groovy(vars.get(&quot;isExcute&quot;) == &quot;true&quot;,)}
+</stringProp>
+          </WhileController>
+          <hashTree>
+            <eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler" testname="read" enabled="true">
+              <boolProp name="TLS">false</boolProp>
+              <stringProp name="server"></stringProp>
+              <stringProp name="port">80</stringProp>
+              <stringProp name="path"></stringProp>
+              <stringProp name="connectTimeout">20000</stringProp>
+              <stringProp name="dataType">Text</stringProp>
+              <boolProp name="createNewConnection">false</boolProp>
+              <stringProp name="readTimeout">30000</stringProp>
+              <boolProp name="optional">false</boolProp>
+            </eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">json_type</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.payload.type</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="script">//获取当前流消息内的type值
+String jsonType = vars.get(&quot;json_type&quot;);
+
+//log.info(&quot;json_type的值为: &quot; + jsonType);
+
+//判断当前流消息是否为最后一条，如是，则复制循环语句false，停止循环读取流消息
+if (jsonType.equals(&quot;streamEnd&quot;)) {
+    vars.put(&quot;isExcute&quot;, &quot;false&quot;);
+}
+
+//log.info(&quot;isExcute的值为: &quot; +  vars.get(&quot;isExcute&quot;));
+
+
+
+</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <eu.luminis.jmeter.wssampler.CloseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.CloseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.CloseWebSocketSampler" testname="WebSocket Close" enabled="true">
+          <stringProp name="statusCode">1000</stringProp>
+          <stringProp name="readTimeout">30000</stringProp>
+        </eu.luminis.jmeter.wssampler.CloseWebSocketSampler>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="步骤拆解测试">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户、环境变量设置">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="ZFACTORY_LOGIN_HOST" elementType="Argument">
+              <stringProp name="Argument.name">ZFACTORY_LOGIN_HOST</stringProp>
+              <stringProp name="Argument.value">commander-bot-manager.qa.ii-ai.tech</stringProp>
+              <stringProp name="Argument.desc">qa_login_host 线上环境更换z-commander-bot-api.ai-indeed.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TARS_HOST" elementType="Argument">
+              <stringProp name="Argument.name">TARS_HOST</stringProp>
+              <stringProp name="Argument.value">tars-ipa.qa.ii-ai.tech</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">tars.ai-indeed.com 线上环境更替此值</stringProp>
+            </elementProp>
+            <elementProp name="FACTORY_VERSION" elementType="Argument">
+              <stringProp name="Argument.name">FACTORY_VERSION</stringProp>
+              <stringProp name="Argument.value">7.1.0.3-develop-7.1.0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">7.1.0.2 线上环境使用此值</stringProp>
+            </elementProp>
+            <elementProp name="CSV_PATH" elementType="Argument">
+              <stringProp name="Argument.name">CSV_PATH</stringProp>
+              <stringProp name="Argument.value">messageCSV.csv</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">csv文件相对路径 csv文件与jmx文件同一目录下</stringProp>
+            </elementProp>
+            <elementProp name="USER_NAME" elementType="Argument">
+              <stringProp name="Argument.name">USER_NAME</stringProp>
+              <stringProp name="Argument.value">dsw</stringProp>
+              <stringProp name="Argument.desc">登录的用户名</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="USER_PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">USER_PASSWORD</stringProp>
+              <stringProp name="Argument.value">f492a2fc942ed36ce4e7abe0af80ce7f</stringProp>
+              <stringProp name="Argument.desc">登录的密码，值为密码加密后的值</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求">
+          <stringProp name="TestPlan.comments">消息体数据qa和线上环境替换时，也需要替换，userName和password变量保持不变(可在 用户、环境变量设置组件 中更换值)</stringProp>
+          <stringProp name="HTTPSampler.domain">${ZFACTORY_LOGIN_HOST}</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/login/factory/v5</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;userName&quot;: &quot;${USER_NAME}&quot;,&#xd;
+	&quot;password&quot;: &quot;${USER_PASSWORD}&quot;,&#xd;
+	&quot;preLoginCheckType&quot;: &quot;0&quot;,&#xd;
+	&quot;loginActive&quot;: 1,&#xd;
+	&quot;clientDetailVersion&quot;: &quot;7.1.0.3&quot;,&#xd;
+	&quot;requestUuid&quot;: &quot;20IJTE5qpD&quot;,&#xd;
+	&quot;machineInternalIp&quot;: &quot;192.168.126.1&quot;,&#xd;
+	&quot;machineName&quot;: &quot;guizhi&quot;,&#xd;
+	&quot;machineMac&quot;: &quot;N5NRCX031762208N519NRCX002FYJMB&quot;,&#xd;
+	&quot;machineVersion&quot;: &quot;7.1.0&quot;,&#xd;
+	&quot;machineOperateSystem&quot;: &quot;Microsoft Windows 11 家庭中文版&quot;,&#xd;
+	&quot;machineCpuName&quot;: &quot;AMD Ryzen 7 6800H with Radeon Graphics         &quot;,&#xd;
+	&quot;machineCpuNumber&quot;: 16,&#xd;
+	&quot;machinePhysicalMemory&quot;: 16371519488,&#xd;
+	&quot;loginExtraComputerScreenResolution&quot;: &quot;1536*864&quot;,&#xd;
+	&quot;loginExtraComputerScreenZoomRatio&quot;: &quot;125%&quot;,&#xd;
+	&quot;packageLoginType&quot;: &quot;standard&quot;,&#xd;
+	&quot;industryType&quot;: &quot;standard&quot;,&#xd;
+	&quot;releaseType&quot;: &quot;standard&quot;,&#xd;
+	&quot;productFullType&quot;: &quot;Z-Factory&quot;,&#xd;
+	&quot;patchVersion&quot;: &quot;SP3&quot;,&#xd;
+	&quot;productCustom&quot;: &quot;develop-7.1.0&quot;,&#xd;
+	&quot;factoryProductType&quot;: &quot;standard&quot;,&#xd;
+	&quot;extLoginType&quot;: &quot;standard&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            <stringProp name="TestPlan.comments">提前token为局部变量token(Names of created variables)</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <boolProp name="resetInterpreter">false</boolProp>
+          <stringProp name="script"> vars.put(&quot;isExcute&quot;, &quot;true&quot;);
+ vars.put(&quot;isValidResponse&quot;, &quot;false&quot;);
+ vars.put(&quot;isAsser&quot;, &quot;false&quot;);
+</stringProp>
+          <stringProp name="TestPlan.comments">在vars中添加循环变量isExcute、isValidResponse、isAsser，以便后续调用</stringProp>
+        </BeanShellPreProcessor>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="WebSocket Open Connection" enabled="true">
+          <boolProp name="TLS">false</boolProp>
+          <stringProp name="server">${TARS_HOST}</stringProp>
+          <stringProp name="port">80</stringProp>
+          <stringProp name="path">/tars/agent/socketIO</stringProp>
+          <stringProp name="connectTimeout">20000</stringProp>
+          <stringProp name="readTimeout">6000</stringProp>
+          <stringProp name="TestPlan.comments">建立websocket连接</stringProp>
+        </eu.luminis.jmeter.wssampler.OpenWebSocketSampler>
+        <hashTree/>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller">
+          <stringProp name="WhileController.condition">${__groovy(vars.get(&quot;isExcute&quot;) == &quot;true&quot;,)}
+</stringProp>
+          <stringProp name="TestPlan.comments">控制读取csv文件</stringProp>
+        </WhileController>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置">
+            <stringProp name="filename">${CSV_PATH}</stringProp>
+            <stringProp name="fileEncoding">UTF-8</stringProp>
+            <stringProp name="variableNames">message,expected_steps</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <stringProp name="delimiter">*</stringProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">false</boolProp>
+            <boolProp name="stopThread">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <stringProp name="TestPlan.comments">按行读取CSV文件数据</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.util.Random;
+
+// 创建 Random 对象
+Random rand = new Random();
+
+// 定义可能的字符集合
+String upperCase = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+String lowerCase = upperCase.toLowerCase();
+String numbers = &quot;0123456789&quot;;
+String allChars = upperCase + lowerCase + numbers;
+
+// 定义结果字符串
+StringBuilder stringBuilder = new StringBuilder();
+
+// 生成 10 个随机字符
+for (int i = 0; i &lt; 10; i++) {
+    // 随机选择一个字符
+    char randomChar = allChars.charAt(rand.nextInt(allChars.length()));
+    // 将字符添加到结果字符串
+    stringBuilder.append(randomChar);
+}
+
+// 将生成的随机字符串设置为 JMeter 变量，以便在测试计划的其他部分使用
+log.info(&quot;requestId的值为-----------------------------: &quot; + stringBuilder);
+vars.put(&quot;requestId&quot;, &quot;0000_&quot; + stringBuilder.toString());</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="TestPlan.comments">生成随机的requestId</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler" testname="request-response" enabled="true">
+            <boolProp name="createNewConnection">false</boolProp>
+            <boolProp name="TLS">false</boolProp>
+            <stringProp name="server">${TARS_HOST}</stringProp>
+            <stringProp name="port">80</stringProp>
+            <stringProp name="path">/tars/agent/socketIO</stringProp>
+            <stringProp name="connectTimeout">20000</stringProp>
+            <stringProp name="payloadType">Text</stringProp>
+            <stringProp name="requestData">{
+    &quot;action&quot;: &quot;chat&quot;,
+    &quot;requestId&quot;: &quot;${requestId}&quot;,
+    &quot;payload&quot;: {
+        &quot;message&quot;: &quot;${message}&quot;,
+        &quot;type&quot;: &quot;flow&quot;,
+        &quot;componentInfo&quot;: {
+
+        },
+        &quot;fileInfo&quot;: [
+
+        ],
+        &quot;apps&quot;: [
+
+        ],
+        &quot;isAtApplication&quot;: false,
+        &quot;preUuid&quot;: &quot;&quot;,
+        &quot;action&quot;: &quot;init&quot;,
+        &quot;sessionId&quot;: &quot;&quot;,
+        &quot;packageId&quot;: &quot;&quot;,
+        &quot;autofill&quot;: true,
+        &quot;factoryVersion&quot;: &quot;${FACTORY_VERSION}&quot;
+    },
+    &quot;authorization&quot;: &quot;${token}&quot;
+}</stringProp>
+            <stringProp name="readTimeout">120000</stringProp>
+            <boolProp name="loadDataFromFile">false</boolProp>
+            <stringProp name="dataFile"></stringProp>
+          </eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While控制器">
+            <stringProp name="WhileController.condition">${__groovy(vars.get(&quot;isValidResponse&quot;) == &quot;false&quot;,)}
+</stringProp>
+            <stringProp name="TestPlan.comments">控制读取websocket流数据</stringProp>
+          </WhileController>
+          <hashTree>
+            <eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler" testname="read" enabled="true">
+              <boolProp name="TLS">false</boolProp>
+              <stringProp name="server">${TARS_HOST}</stringProp>
+              <stringProp name="port">80</stringProp>
+              <stringProp name="path">/tars/agent/socketIO</stringProp>
+              <stringProp name="connectTimeout">20000</stringProp>
+              <stringProp name="dataType">Text</stringProp>
+              <boolProp name="createNewConnection">false</boolProp>
+              <stringProp name="readTimeout">30000</stringProp>
+              <boolProp name="optional">false</boolProp>
+            </eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler>
+            <hashTree>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">import org.json.JSONObject;
+import org.json.JSONArray;
+
+// 解析read的响应数据为json格式
+public JSONObject parseResponse(String response) {
+	try {
+		JSONObject jsonResponse = new JSONObject(response);
+ 		return jsonResponse;
+    } catch (Exception e) {
+		log.info(&quot;解析read结果失败: &quot; + e.getMessage());
+		return null;
+    }
+}
+
+// 判断action是否为chat
+public Boolean processAction(JSONObject jsonResponse) {
+	try{
+		if (jsonResponse.has(&quot;action&quot;) &amp;&amp; jsonResponse.get(&quot;action&quot;).toString().equals(&quot;chat&quot;)) {
+    			return true;
+		} 
+		else {
+			return false;
+		}
+	}catch (Exception e) {
+		System.err.println(&quot;processAction发生异常: &quot; + e.getMessage());
+	     return false;
+	}	
+}
+
+// 获取read结果的steps
+public List&lt;String&gt; getStepsList(JSONObject jsonResponse){
+	// 解析实际步骤
+    List&lt;String&gt; actualSteps = new ArrayList&lt;&gt;();
+	
+	try{
+		JSONArray plan = jsonResponse.getJSONObject(&quot;payload&quot;)
+						   		.getJSONObject(&quot;data&quot;)
+						   		.getJSONArray(&quot;plan&quot;);
+		for (int i=0; i&lt;plan.length(); i++) {
+			JSONArray steps = plan.getJSONObject(i).getJSONArray(&quot;steps&quot;);
+			for (int j=0; j&lt;steps.length(); j++) {
+				actualSteps.add(steps.getJSONObject(j).getString(&quot;stepName&quot;));
+			}
+		}
+	}catch (Exception e) {
+        log.info(&quot;获取steps失败: &quot; + e.getMessage());
+	}
+	return actualSteps;
+}
+
+// 获取csv文件中的预期步骤
+public List&lt;String&gt; getExpectedStepsList(){
+	return Arrays.asList(vars.get(&quot;expected_steps&quot;).split(&quot;;&quot;));
+}
+
+
+// 比较预期步骤和实际步骤是否符合
+public Boolean getComparisonResult(List&lt;String&gt; actualSteps,List&lt;String&gt; expectedSteps){
+	//比较方法
+	return actualSteps.equals(expectedSteps);
+}
+
+
+// 获取原始响应
+String response = prev.getResponseDataAsString();
+
+// read的响应数据转为json格式
+JSONObject jsonResponse = parseResponse(response);
+
+// 仅处理action:chat的响应
+if (processAction(jsonResponse)) {
+    
+	// 解析实际步骤
+    List&lt;String&gt; actualSteps = getStepsList(jsonResponse);
+	
+	// 获取预期步骤
+    List&lt;String&gt; expectedSteps = getExpectedStepsList();
+	
+    // 对比数据
+	Boolean temp = getComparisonResult(actualSteps,expectedSteps);
+	
+	// 实际与预期不符
+	if(!temp){
+		// 存储实际、预期数据
+		vars.putObject(&quot;actualSteps&quot;, actualSteps);
+		vars.putObject(&quot;expectedSteps&quot;, expectedSteps);
+		// 标记需要断言
+		vars.put(&quot;isAsser&quot;,&quot;true&quot;);
+	}
+
+    vars.put(&quot;isValidResponse&quot;, &quot;true&quot;); // 标记有效响应(停止读取流数据，进入下个案例循环)
+}</stringProp>
+                <stringProp name="TestPlan.comments">获取响应中的stepName列表，并与预期进行比较</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="script">// 断言
+if (&quot;true&quot;.equals(vars.get(&quot;isAsser&quot;))) {
+	// 获取测试数据
+	List&lt;String&gt; expectedSteps = vars.getObject(&quot;expectedSteps&quot;);
+	List&lt;String&gt; actualSteps = vars.getObject(&quot;actualSteps&quot;);
+	String msg = vars.get(&quot;message&quot;);
+	String actualStepsString = actualSteps.toString();
+	String expectedStepsString = expectedSteps.toString();
+	
+	AssertionResult.setFailure(true); // 标记断言失败
+	AssertionResult.setFailureMessage(&quot;案例 &quot; + msg + &quot; 预期不符\n&quot; + &quot;\t实际步骤：&quot;
+								+ actualStepsString + &quot;\n&quot; + &quot;\t预期步骤：&quot; + expectedStepsString);
+	
+	// 添加调试信息
+	log.info(&quot;当前案例: {}，与预期不符合&quot;, vars.get(&quot;message&quot;));
+	log.info(&quot;实际步骤列表: {}&quot;, actualSteps.toString());
+	log.info(&quot;预期步骤列表: {}&quot;, expectedSteps.toString());
+}</stringProp>
+                <stringProp name="TestPlan.comments">判断实际步骤是否与预期步骤相符</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 后置处理程序" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">if (&quot;&lt;EOF&gt;&quot;.equals(vars.get(&quot;message&quot;))) {
+    log.info(&quot;检测到CSV文件结束标记&quot;);
+    vars.put(&quot;isExcute&quot;, &quot;false&quot;);
+    ctx.getThread().stop(); 
+}</stringProp>
+            <stringProp name="TestPlan.comments">当csv文件没有按预期终止，继续读取空内容时，设置isExcute值为false以终止循环</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <eu.luminis.jmeter.wssampler.CloseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.CloseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.CloseWebSocketSampler" testname="WebSocket Close" enabled="true">
+          <stringProp name="statusCode">1000</stringProp>
+          <stringProp name="readTimeout">6000</stringProp>
+        </eu.luminis.jmeter.wssampler.CloseWebSocketSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
