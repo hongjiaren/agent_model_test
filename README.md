@@ -33,17 +33,26 @@
 .
 ├── README.md                 # 项目说明文档
 ├── requirements.txt          # Python依赖包
+├── .gitignore               # Git忽略文件配置
 ├── tests/                    # 测试用例目录
 │   ├── unit/                # 单元测试
+│   │   ├── component_test.py
+│   │   ├── intent_test.py
+│   │   ├── offline_map_test.py
+│   │   └── parameter_extraction_test.py
 │   ├── integration/         # 集成测试
+│   │   └── online_all_test.py
 │   └── performance/         # 性能测试
 ├── src/                     # 源代码目录
-│   ├── models/             # 模型实现
+│   ├── models_prompt/       # 模型提示词
+│   │   └── prompt.py
 │   ├── utils/              # 工具函数
 │   └── config/             # 配置文件
 ├── data/                    # 测试数据目录
-│   ├── raw/                # 原始数据
-│   └── processed/          # 处理后的数据
+│   ├── component/          # 组件测试数据
+│   ├── intent/             # 意图测试数据
+│   ├── offline_map/        # 离线地图测试数据
+│   └── parameter_extraction/ # 参数提取测试数据
 ├── docs/                    # 文档目录
 └── scripts/                 # 实用脚本
 ```
